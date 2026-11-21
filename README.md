@@ -4,7 +4,7 @@ The electronic badge for TENGUCON 3.0 (Akihabara, 2026): an ESP32-S3 handheld wi
 a 56-key keyboard, LoRa chat, an IR blaster and receiver, RGB LEDs and a microSD slot, running on a
 single-cell LiPo that charges over USB-C.
 
-Hardware by Jonathan Black. The firmware was written mainly by Claude (Anthropic's AI model).
+Hardware by Jonathan Black. Firmware by Djnn, Claude and Jonathan Black.
 
 <p align="center">
   <img src="docs/images/render-iso.png" width="49%" alt="3D render of the badge, front">
