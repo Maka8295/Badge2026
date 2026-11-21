@@ -4,8 +4,10 @@ The electronic badge for TENGUCON 3.0 (Akihabara, 2026): an ESP32-S3 handheld wi
 a 56-key keyboard, LoRa chat, an IR blaster and receiver, RGB LEDs and a microSD slot, running on a
 single-cell LiPo that charges over USB-C.
 
-Hardware by Jonathan Black. Firmware by Djnn, Claude and Jonathan Black.
-Generously funded by Nick, James and May.
+Hardware designed AI free by Jonathan Black in KiCad, Assembly by Jonathan and Marika Usui.\
+Firmware by Djnn, Claude and Jonathan Black.\
+Clip-on case by Greg ([Eths33](https://github.com/Eths33)).\
+Generously funded by James, Nick and May.
 
 <p align="center">
   <img src="docs/images/render-iso.png" width="49%" alt="3D render of the badge, front">
@@ -40,6 +42,16 @@ SMD assembly only: the hand-soldered through-hole parts (IR LEDs and the IR rece
   <img src="docs/images/render-bottom.png" width="45%" alt="3D render, bottom">
 </p>
 
+### Case
+
+A 3D-printable clip-on backing designed by community member Greg ([Eths33](https://github.com/Eths33)).
+The STL and STEP files, printing notes and fitting instructions are in [case/](case/).
+
+<p align="center">
+  <img src="case/image/badge-in-case-front.png" width="45%" alt="Badge in the clip-on backing, front">
+  <img src="case/image/badge-in-case-back.png" width="45%" alt="Clip-on backing, back">
+</p>
+
 ### PCB editor
 
 <p align="center">
@@ -59,6 +71,7 @@ SMD assembly only: the hand-soldered through-hole parts (IR LEDs and the IR rece
 | `3dmodels/` | Project-local 3D models (Ra-01SH, SWPA3015S inductor) |
 | `badge.step` | STEP export of the assembled board |
 | `production/` | JLCPCB fabrication outputs (Gerbers, BOM, placement) |
+| `case/` | 3D-printable clip-on backing by Greg (MIT licence) |
 | `firmware/` | Rust firmware, app SDK and tools; see [firmware/README.md](firmware/README.md) |
 
 **Spoiler warning:** `firmware/hunt/` contains the TENGUCON 3.0 scavenger hunt, including all the answers.
@@ -73,7 +86,10 @@ the licence and say what you changed. Please credit it as:
 
 > Tengucon 2026 Badge by Jonathan Black, https://github.com/Maka8295/Badge2026
 
-Third-party material keeps its own licence and is not covered by CC BY 4.0. This includes the
+The case in `case/` was designed by Greg ([Eths33](https://github.com/Eths33)) and is licensed under
+the MIT licence; see [case/LICENSE](case/LICENSE).
+
+Other third-party material keeps its own licence and is not covered by CC BY 4.0. This includes the
 JetBrains Mono font (SIL OFL, `firmware/tools/fonts/OFL.txt`), the Flipper Zero IR files
 (GPL-3.0, `firmware/tools/flipper/SOURCE.txt`), the Phrack issue archive, and sponsor logos and
 trademarks.
