@@ -1,0 +1,62 @@
+--  SCREEN (SPI)  -- The following two use the same SPI BUS
+
+GPIO:   Function:
+39      MOSI
+01      WRX
+41      CLK
+02      CS2 (chip select 2)
+
+
+--  LORA (SPI)  --
+
+GPIO:   Function:
+39      MOSI
+01      WRX
+41      CLK
+38      CS1 (chip select 1)
+42      IRO (lora module general IO)
+
+
+--  SD Card Reader (SDMMC)  --
+
+GPIO:   Function:
+06      SDCLK
+05      DAT0
+04      DAT1
+16      DAT2
+15      DAT3
+07      CMD
+      
+
+--   IR Blaster   (GPIO) --
+
+GPIO:   Function:
+43      IR-IN
+44      IR-OUT
+
+
+--  LEDs SK6803MINI-E-001  (Adressable over one GPIO using neopixel library)  --
+
+GPIO:   Function:
+3       LED data pin !!!!careful with this GPIO as it is part of bootstrapping for JTAG!!!
+
+
+--  Keyboard  (KMK python keyboard library?)  --
+Total of 14 columns and 7 rows multiplexed with 3 multiplexers.
+S0, S1, S2 are the adresses for ROWOUT which multiplexes the 7 rows,
+S3, S4, S5 are the adresses for COLOUT1 which multiplexes COL1 through COL7
+S6, S7, S8 are the adresses for COLOUT2 which multiplexes COL8 through COL14
+
+GPIO:   Function:
+47      COLOUT1
+48      COLOUT2
+21      ROWOUT
+17      S0
+18      S1
+08      S2
+09      S3
+10      S4
+11      S5
+12      S6
+13      S7
+14      S8

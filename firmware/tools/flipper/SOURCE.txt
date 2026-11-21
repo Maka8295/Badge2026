@@ -1,0 +1,4 @@
+Source: https://github.com/flipperdevices/flipperzero-firmware
+Path: applications/main/infrared/resources/infrared/assets/
+Commit: 2bbf7a54bae7316da858ab62f22ed8db0b4c661b
+License: GPL-3.0 (same as the Flipper Zero firmware)

@@ -1,0 +1,31 @@
+[package]
+name = "badge"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+
+[[bin]]
+name = "badge"
+harness = false
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true
+opt-level = "z"
+
+[dependencies]
+log = "0.4"
+esp-idf-svc = "0.53"
+mipidsi = "0.10"
+embedded-graphics = "0.8"
+flate2 = "1"
+
+[build-dependencies]
+embuild = "0.33.5"
+flate2 = "1"
+
+[[package.metadata.esp-idf-sys.extra_components]]
+remote_component = { name = "espressif/elf_loader", version = "1.3.3" }
+bindings_header = "src/elf/bindings.h"

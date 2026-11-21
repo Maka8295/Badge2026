@@ -1,0 +1,51 @@
+salt = "tengu-hunt-2026"
+iterations = 4000
+
+[badge]
+serial = "yamabushi-boots-b6mhm73w"
+morse = "long nose blinks hw6wgq"
+nvs = "hauchiwa-in-flash-h6jk7pqk"
+
+[badge.crackme]
+reveal = "kurama-dojo-mpp3esnn"
+maze_seed = 11
+maze_size = 8
+extra_openings = 8
+start = [0, 0]
+checkpoints = [[6, 6], [3, 0], [4, 3], [7, 6]]
+
+[[stage]]
+answer = "yamabushi-boots-b6mhm73w"
+clue = "The next code is blinking. Format: 4 words with spaces."
+
+[[stage]]
+answer = "long nose blinks hw6wgq"
+clue = "The next code sits in my flash, NVS namespace hunt. Format: word-word-word-8 chars."
+
+[[stage]]
+answer = "hauchiwa-in-flash-h6jk7pqk"
+clue = "The next code is hidden as a gift in my flash, same namespace. Crack it. Format: word-word-8 chars. Keep it, it opens a door."
+
+[[stage]]
+answer = "kurama-dojo-mpp3esnn"
+clue = "A hidden network, TENGU-HUNT, keeps shouting. Listen, then find who shouts. The next code is what you hear plus what is written on it. Format: word-6 chars-14 chars."
+
+[[stage]]
+answer = "sojobo-fcq9dc-xqlg74y6nvbabz"
+clue = "The next code needs 5 friends. Format: word-word-word-6 chars."
+ir_swap = { badges = 5, reveal = "six-long-noses-48w3bh" }
+
+[[stage]]
+answer = "six-long-noses-48w3bh"
+clue = "One remote in the IR blaster is not like the others. It holds a token. At Kanda Myojin, the coin detective has a stone. Next code: token-name of the friend next to him."
+ir_remote = { name = "Myojin", text = "token=pdky8fu7y" }
+
+[[stage]]
+answers = ["pdky8fu7y-hachigoro", "pdky8fu7y-hachigorou", "pdky8fu7y-garappachi"]
+clue = "Last stop: mAAch ecute Manseibashi. Two old stairs are named after years. Go up one, come down the other. Next code: bvhrcnsexa-year of the one you came down."
+
+[[stage]]
+answer = "bvhrcnsexa-1935"
+clue = "Done. Show this screen to an organizer at UDX."
+finish = true
+

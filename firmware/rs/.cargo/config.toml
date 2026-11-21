@@ -1,0 +1,16 @@
+[build]
+target = "xtensa-esp32s3-espidf"
+
+[target.xtensa-esp32s3-espidf]
+linker = "ldproxy"
+runner = "espflash flash --monitor"
+rustflags = ["--cfg", "espidf_time64", "--cfg", "espidf_picolibc"]
+
+[unstable]
+build-std = ["std", "panic_abort"]
+
+[env]
+MCU = "esp32s3"
+IDF_PATH = { value = "../../../../../../esp/esp-idf", relative = true, force = false }
+ESP_IDF_TOOLS_INSTALL_DIR = "global"
+ESP_IDF_SDKCONFIG_DEFAULTS = { value = "sdkconfig.defaults", relative = true }
